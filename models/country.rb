@@ -26,7 +26,8 @@ class Country
   end
 
   def update()
-    sql = "INSERT INTO countries
+    sql = "UPDATE countries
+    SET
     (
       name
     )
@@ -34,7 +35,7 @@ class Country
     (
       $1
     )
-    RETURNING id"
+    WHERE id = $2"
     values = [@name]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
