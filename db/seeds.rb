@@ -3,9 +3,9 @@ require_relative( "../models/country.rb" )
 require_relative( "../models/travel.rb" )
 require("pry-byebug")
 
-Country.delete_all()
-City.delete_all()
-Travel.delete_all()
+# Country.delete_all()
+# City.delete_all()
+# Travel.delete_all()
 
 country1 = Country.new({
   "name" => "United Kingdom",
@@ -41,17 +41,17 @@ city3 = City.new({
 city3.save()
 
 travel1 = Travel.new({
-  "country_id" => country1.id()
+  "country_id" => country1.id(),
   "city_id" => city1.id()
   })
 
 travel2 = Travel.new({
-  "country_id" => country1.id()
+  "country_id" => country1.id(),
   "city_id" => city2.id()
   })
 
 travel3 = Travel.new({
-  "country_id" => country3.id()
+  "country_id" => country3.id(),
   "city_id" => city3.id()
   })
 
