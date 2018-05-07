@@ -10,6 +10,11 @@ get '/cities' do
   erb ( :"cities/index" )
 end
 
+get '/cities/new' do
+  @cities = Cities.all
+  erb(:"cities/new")
+end
+
 get '/cities/:id' do
   @cities = Cities.find(params['id'].to_i)
   erb( :"cities/show" )
