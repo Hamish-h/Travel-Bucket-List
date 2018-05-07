@@ -26,4 +26,11 @@ class Travel
   end
 
 
+
+  
+  def self.delete_all
+    sql = "DELETE FROM countries"
+    SqlRunner.run( sql )
+  end
+
 end

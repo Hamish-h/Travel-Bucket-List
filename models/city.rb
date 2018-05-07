@@ -27,5 +27,9 @@ class City
       @id = results.first()['id'].to_i
     end
 
+    def self.delete_all
+      sql = "DELETE FROM cities"
+      SqlRunner.run( sql )
+    end
 
 end
