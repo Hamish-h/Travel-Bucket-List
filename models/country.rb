@@ -41,10 +41,21 @@ class Country
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM countries
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM countries"
     results = SqlRunner.run( sql )
     return results.map { |hash| countries.new( hash ) }
+  end
+
+  def self.map_items(countries_data)
+    return countries_data.map { |country| Country.new(country) }
   end
 
   def self.find( id )
@@ -58,12 +69,6 @@ class Country
   def self.delete_all
     sql = "DELETE FROM countries"
     SqlRunner.run( sql )
-  end
-
-  def self.destroy(id)
-    WHERE id = $1"
-    values = [id]
-    SqlRunner.run( sql, values )
   end
 
 end
