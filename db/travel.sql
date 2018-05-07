@@ -20,5 +20,4 @@ CREATE TABLE travels
   id SERIAL8 primary key,
   country_id INT4 REFERENCES countries(id) ON DELETE CASCADE,
   city_id INT4 REFERENCES cities(id) ON DELETE CASCADE
-  visited
 );

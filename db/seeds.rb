@@ -8,17 +8,17 @@ require("pry-byebug")
 # Travel.delete_all()
 
 country1 = Country.new({
-  "name" => "United Kingdom",
+  "name" => "United Kingdom"
 })
 country1.save()
 
 country2 = Country.new({
-  "name" => "France",
+  "name" => "France"
 })
 country2.save()
 
 country3 = Country.new({
-  "name" => "Spain",
+  "name" => "Spain"
 })
 country3.save()
 
@@ -44,16 +44,19 @@ travel1 = Travel.new({
   "country_id" => country1.id(),
   "city_id" => city1.id()
   })
+travel1.save()
 
 travel2 = Travel.new({
   "country_id" => country1.id(),
   "city_id" => city2.id()
   })
+travel2.save()
 
 travel3 = Travel.new({
   "country_id" => country3.id(),
   "city_id" => city3.id()
   })
+travel3.save()
 
 binding.pry
 nil

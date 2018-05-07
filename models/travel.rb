@@ -2,8 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Travel
 
-  attr_reader( :id )
-  attr_accessor ( :country_id, :city_id)
+  attr_reader( :id, :country_id, :city_id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -21,7 +20,7 @@ class Travel
         $1, $2
       )
       RETURNING id"
-      values = [@name]
+      values = [@country_id, @city_id]
       results = SqlRunner.run(sql, values)
       @id = results.first()['id'].to_i
     end
