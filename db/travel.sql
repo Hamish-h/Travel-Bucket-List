@@ -15,7 +15,7 @@ CREATE TABLE cities
   country_id INT4 REFERENCES countries(id) ON DELETE CASCADE
 );
 
-CREATE TABLE travel
+CREATE TABLE travels
 (
   id SERIAL8 primary key,
   country_id INT4 REFERENCES countries(id) ON DELETE CASCADE
