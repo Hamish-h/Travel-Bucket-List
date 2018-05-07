@@ -3,9 +3,9 @@ require_relative( "../models/country.rb" )
 require_relative( "../models/travel.rb" )
 require("pry-byebug")
 
-# Country.delete_all()
-# City.delete_all()
-# Travel.delete_all()
+Country.delete_all()
+City.delete_all()
+Travel.delete_all()
 
 country1 = Country.new({
   "name" => "United Kingdom"
