@@ -6,16 +6,16 @@ require_relative( '../models/country.rb' )
 require_relative( '../models/travel.rb' )
 
 get '/cities' do
-  @cities = Cities.all()
+  @cities = City.all()
   erb ( :"cities/index" )
 end
 
 get '/cities/new' do
-  @cities = Cities.all
+  @cities = City.all
   erb(:"cities/new")
 end
 
 get '/cities/:id' do
-  @cities = Cities.find(params['id'].to_i)
+  @cities = City.find(params['id'].to_i)
   erb( :"cities/show" )
 end
