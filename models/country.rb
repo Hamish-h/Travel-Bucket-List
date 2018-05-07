@@ -25,7 +25,22 @@ class Country
     @id = results.first()['id'].to_i
   end
 
-  def country()
+  def update()
+    sql = "INSERT INTO countries
+    (
+      name
+    )
+    VALUES
+    (
+      $1
+    )
+    RETURNING id"
+    values = [@name]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()['id'].to_i
+  end
+
+  def self.all()
     sql = "SELECT * FROM countries"
     results = SqlRunner.run( sql )
     return results.map { |hash| countries.new( hash ) }
@@ -42,6 +57,12 @@ class Country
   def self.delete_all
     sql = "DELETE FROM countries"
     SqlRunner.run( sql )
+  end
+
+  def self.destroy(id)
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
   end
 
 end

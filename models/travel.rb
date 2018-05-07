@@ -11,18 +11,19 @@ class Travel
   end
 
   def save()
-      sql = "INSERT INTO travels
-      (
-        country_id, city_id
-      )
-      VALUES
-      (
-        $1, $2
-      )
-      RETURNING id"
-      values = [@country_id, @city_id]
-      results = SqlRunner.run(sql, values)
-      @id = results.first()['id'].to_i
-    end
+    sql = "INSERT INTO travels
+    (
+      country_id, city_id
+    )
+    VALUES
+    (
+      $1, $2
+    )
+    RETURNING id"
+    values = [@country_id, @city_id]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()['id'].to_i
+  end
+
 
 end
