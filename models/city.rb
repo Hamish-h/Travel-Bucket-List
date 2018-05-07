@@ -9,6 +9,7 @@ class City
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @country_id = options['country_id']
+  
   end
 
   def save()
