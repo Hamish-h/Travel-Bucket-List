@@ -60,7 +60,6 @@ class City
       return cities_data.map { |cities| Cities.new(cities) }
     end
 
-
     def self.delete_all
       sql = "DELETE FROM cities"
       SqlRunner.run( sql )
