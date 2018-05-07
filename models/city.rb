@@ -50,6 +50,17 @@ class City
       SqlRunner.run(sql, values)
     end
 
+    def self.all()
+      sql = "SELECT * FROM cities"
+      results = SqlRunner.run( sql )
+      return results.map { |hash| cities.new( hash ) }
+    end
+
+    def self.map_items(cities_data)
+      return cities_data.map { |cities| Cities.new(cities) }
+    end
+
+
     def self.delete_all
       sql = "DELETE FROM cities"
       SqlRunner.run( sql )
