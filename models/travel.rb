@@ -25,6 +25,12 @@ class Travel
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM travels"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| travels.new( hash ) }
+  end
+
   def self.delete_all
     sql = "DELETE FROM travels"
     SqlRunner.run( sql )
