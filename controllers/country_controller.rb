@@ -18,7 +18,7 @@ get '/countries/:id' do
   erb( :"countries/show" )
 end
 
-get '/cities/:id/edit' do
-  @cities = City.find(params['id'])
+get '/countries/:id/edit' do
+  @countries = Country.find(params['id'])
   erb(:edit)
 end
