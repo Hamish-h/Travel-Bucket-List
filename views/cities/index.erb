@@ -13,6 +13,7 @@
 
 <% @cities.each do |city| %>
   <p>Name: <%= city.name() %></p>
-  <p><a href="/cities/edit<%= city.id %>">Edit City</a></p>
+  <p><a href="/cities/new<%= city.id %>">Add a new City</a></p>
+  <p><a href="/cities/edit<%= city.id %>">Update an existing City</a></p>
   <hr />
 <% end %>

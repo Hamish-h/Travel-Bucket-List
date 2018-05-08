@@ -38,7 +38,7 @@ class City
         $1, $2
       )
       WHERE id = $3"
-      values = [@name]
+      values = [@name, @country_id]
       results = SqlRunner.run(sql, values)
       @id = results.first()['id'].to_i
     end
@@ -54,7 +54,7 @@ class City
         $1, $2
       )
       WHERE id = $3"
-      values = [@name]
+      values = [@name, @country_id]
       results = SqlRunner.run(sql, values)
       @id = results.first()['id'].to_i
     end
