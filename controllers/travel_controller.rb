@@ -5,7 +5,7 @@ require_relative( '../models/city.rb' )
 require_relative( '../models/country.rb' )
 require_relative( '../models/travel.rb' )
 
-get '/countries' do
+get '/travels' do
   @travels = Travel.all()
   erb ( :"travels/index" )
 end
