@@ -24,7 +24,6 @@ get '/cities/:id' do
   erb( :"cities/show" )
 end
 
-
 post '/cities' do
   cities = City.new(params)
   cities.save
