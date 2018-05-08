@@ -1,8 +1,8 @@
 <H1>New</H1>
 <form method="POST" action="/new">
-  <label>
-  Select a country:
-    <select name="country_id">
+  <label for "country">
+  Enter a country:
+    <input type="text" name="country-id">
       <% for country in @countries %>
       <option value="<%= country.id %>"><%= country.name %></option>
       <% end %>
