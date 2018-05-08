@@ -73,4 +73,8 @@ class City
       SqlRunner.run( sql )
     end
 
+    def name
+    return "#{@name.capitalize}"
+  end
+
 end
