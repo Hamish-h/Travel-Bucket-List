@@ -1,0 +1,10 @@
+<H1>New</H1>
+<form method="POST" action="/new">
+  <label>
+  Select a city:
+    <select name="city_id">
+      <% for city in @cities %>
+      <option value="<%= city.id %>"><%= city.name %></option>
+      <% end %>
+    </select>
+  </label>
