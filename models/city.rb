@@ -56,6 +56,14 @@ class City
       return results.map { |hash| City.new( hash ) }
     end
 
+    def self.find( id )
+        sql = "SELECT * FROM cities
+        WHERE id = $1"
+        values = [id]
+        results = SqlRunner.run( sql, values )
+        return City.new( results.first )
+      end
+
     def self.map_items(cities_data)
       return cities_data.map { |cities| Cities.new(cities) }
     end
