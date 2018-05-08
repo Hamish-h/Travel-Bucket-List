@@ -28,7 +28,7 @@ class Travel
   def self.all()
     sql = "SELECT * FROM travels"
     results = SqlRunner.run( sql )
-    return results.map { |hash| travels.new( hash ) }
+    return results.map { |hash| Travel.new( hash ) }
   end
 
   def self.delete_all

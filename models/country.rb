@@ -51,7 +51,7 @@ class Country
   def self.all()
     sql = "SELECT * FROM countries"
     results = SqlRunner.run( sql )
-    return results.map { |hash| countries.new( hash ) }
+    return results.map { |hash| Country.new( hash ) }
   end
 
   def self.map_items(countries_data)

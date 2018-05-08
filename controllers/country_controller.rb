@@ -1,9 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
-require_relative( '../models/city.rb' )
 require_relative( '../models/country.rb' )
-require_relative( '../models/travel.rb' )
 
 get '/countries' do
   @countries = Country.all()
@@ -11,7 +9,7 @@ get '/countries' do
 end
 
 get '/countries/new' do
-  @countries = County.all
+  @countries = Country.all
   erb( :"countries/new" )
 end
 
