@@ -1,0 +1,11 @@
+<H2>Travels</H2>
+<table>
+  <tr>
+    <th>Id</th>
+  </tr>
+  <% for id in @travels %>
+  <tr>
+    <td><a href="/travels/<%= travel.id %>"><%= travel.id %></a></td>
+  </tr>
+  <% end %>
+</table>
