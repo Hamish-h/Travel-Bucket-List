@@ -73,7 +73,7 @@ class City
       SqlRunner.run( sql )
     end
 
-    def name
+    def format_name
     return "#{@name.capitalize}"
   end
 
