@@ -31,13 +31,13 @@ class City
       sql = "UPDATE cities
       SET
       (
-        name
+        name, country_id
       )
       VALUES
       (
-        $1
+        $1, $2
       )
-      WHERE id = $2"
+      WHERE id = $3"
       values = [@name]
       results = SqlRunner.run(sql, values)
       @id = results.first()['id'].to_i
@@ -47,13 +47,13 @@ class City
       sql = "UPDATE cities
       SET
       (
-        name
+        name, country_id
       )
       VALUES
       (
-        $1
+        $1, $2
       )
-      WHERE id = $2"
+      WHERE id = $3"
       values = [@name]
       results = SqlRunner.run(sql, values)
       @id = results.first()['id'].to_i
