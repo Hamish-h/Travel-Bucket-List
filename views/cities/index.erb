@@ -1,4 +1,10 @@
 <H2>Cities</H2>
+<% @cities.each do |city| %>
+  <p><a href="/cities/<%= city.id %>/edit"><%= city.name() %></a></p>
+  <hr />
+<% end %>
+
+
 
 <!-- <table>
   <tr>
@@ -10,9 +16,3 @@
   </tr>
   <% end %>
 </table> -->
-
-<% @cities.each do |city| %>
-  <p>Name: <%= city.name() %></p>
-  <p><a href="/cities/<%= city.id %>/edit">Edit</a></p>
-  <hr />
-<% end %>

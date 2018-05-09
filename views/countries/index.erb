@@ -1,11 +1,5 @@
 <H2>Countries</H2>
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
   <% for country in @countries %>
-  <tr>
-    <td><a href="/countries/<%= country.id %>/edit"><%= country.name %></a></td>
-  </tr>
+  <a href="/countries/<%= country.id %>/edit"><%= country.name %></a>
+  <hr/>
   <% end %>
-</table>
