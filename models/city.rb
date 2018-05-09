@@ -1,4 +1,5 @@
 require_relative( '../db/sql_runner' )
+require('pry-byebug')
 
 class City
 
@@ -6,6 +7,7 @@ class City
   attr_accessor ( :name )
 
   def initialize( options )
+    #binding.pry
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @country_id = options['country_id']
@@ -28,35 +30,18 @@ class City
     end
 
     def update()
+      binding.pry
       sql = "UPDATE cities
       SET
       (
         name, country_id
-      )
-      VALUES
+      ) =
       (
         $1, $2
       )
       WHERE id = $3"
-      values = [@name, @country_id]
+      values = [@name, @country_id, @id]
       results = SqlRunner.run(sql, values)
-      @id = results.first()['id'].to_i
-    end
-
-    def edit()
-      sql = "UPDATE cities
-      SET
-      (
-        name, country_id
-      )
-      VALUES
-      (
-        $1, $2
-      )
-      WHERE id = $3"
-      values = [@name, @country_id]
-      results = SqlRunner.run(sql, values)
-      @id = results.first()['id'].to_i
     end
 
     def delete()

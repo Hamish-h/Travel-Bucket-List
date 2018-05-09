@@ -14,28 +14,29 @@ get '/cities/new' do
   erb(:"cities/new")
 end
 
-post '/new' do
+post '/cities' do
   cities = City.new(params)
   cities.save
-  redirect to("/cities/index")
+  redirect to("/cities")
 end
+
 
 
 
 
 
 get '/cities/:id/edit' do
-  @cities = City.find(params['id'])
-  erb(:edit)
+  @city = City.find(params['id'].to_i)
+  erb(:"cities/edit")
 end
 
 get '/cities/:id' do
-  @cities = City.find(params['id'].to_i)
+  @city = City.find(params['id'].to_i)
   erb( :"cities/show" )
 end
 
-post '/cities' do
-  cities = City.new(params)
-  cities.save
-  redirect to("/cities/index")
+post '/cities/:id' do
+  city = City.new(params)
+  city.update
+  redirect to("/cities")
 end
