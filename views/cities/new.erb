@@ -1,20 +1,23 @@
-<H1>New</H1>
+<h2>New City</h2>
 
-<form action="/cities" method="post">
-  <label for "city">
-    Enter a new city:
-    <input type="text" name="city-id">
-    <select name="city_id">
-      <% for city in @cities %>
-      <input value="<%= city.id %>"><%= city.name %></option>
-      <% end %>
-    </select>
-  </label>
+<form method="POST" action="/cities">
+  <div class="form-wrapper">
+    <label for "city">
+      Enter a new city:
+      <input type="text" name="city-id">
+<!--   commented out marker  -->
+    </label>
+  </div>
   <div class="form-el">
     <input type="submit" value="Add City"/>
   </div>
 </form>
 
+        <!-- <select name="city_id">
+          <% for city in @cities %>
+          <input value="<%= city.id %>"><%= city.name %></option>
+          <% end %>
+        </select> -->
 
 
         <!-- <% for city in @cities %>

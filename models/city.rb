@@ -1,6 +1,6 @@
 require_relative( '../db/sql_runner' )
 # require('pry-byebug')
-#binding.pry
+# binding.pry
 class City
 
   attr_reader( :id, :country_id)
@@ -10,7 +10,6 @@ class City
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @country_id = options['country_id']
-
   end
 
   def save()
