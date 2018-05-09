@@ -1,11 +1,9 @@
-
 <form method="POST" action="/cities/<%= @city.id %>">
   <label for="name">Name:</label>
-    <input type="text" name="name"
-  id="name" value="<%= @city.name %>"/>
+    <input type="text" name="name" id="name" value="<%= @city.name %>"/>
   <input type="submit" value="Update Name"/>
 </form>
 
 <form method="POST" action="/cities/<%= @city.id %>/delete">
-  <input type="submit" value="Delete "/>
+  <input type="submit" value="Delete"/>
 </form>
