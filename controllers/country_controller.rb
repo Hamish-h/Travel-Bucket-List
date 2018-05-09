@@ -37,3 +37,9 @@ get '/countries/:id' do
   @country = Country.find(params['id'].to_i)
   erb( :"countries/show" )
 end
+
+post '/countries/:id/delete' do
+  country = Country.find(params['id'].to_i)
+  country.delete
+  redirect to("/countries")
+end
