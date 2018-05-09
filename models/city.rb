@@ -1,13 +1,12 @@
 require_relative( '../db/sql_runner' )
 # require('pry-byebug')
-
+#binding.pry
 class City
 
   attr_reader( :id, :country_id)
   attr_accessor ( :name )
 
   def initialize( options )
-    #binding.pry
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @country_id = options['country_id']
@@ -30,7 +29,6 @@ class City
     end
 
     def update()
-      # binding.pry
       sql = "UPDATE cities
       SET
       (

@@ -31,7 +31,7 @@ class Country
     (
       name
     )
-    VALUES
+    =
     (
       $1
     )
