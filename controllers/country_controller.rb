@@ -25,6 +25,11 @@ get '/countries/:id/edit' do
   erb(:"countries/edit")
 end
 
+post '/countries/:id/edit' do
+  country = Country.new(params)
+  country.update
+  redirect to("/countries")
+end
 
 
 

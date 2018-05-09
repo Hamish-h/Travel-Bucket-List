@@ -25,20 +25,22 @@ class Country
     @id = results.first()['id'].to_i
   end
 
+# remove brackets aside SET for single value
+# reminder - put them back when adding values
   def update()
     sql = "UPDATE countries
     SET
-    (
+
       name
-    )
+
     =
-    (
+
       $1
-    )
+
     WHERE id = $2"
-    values = [@name]
-    results = SqlRunner.run(sql, values)
-    @id = results.first()['id'].to_i
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+#    @id = results.first()['id'].to_i
   end
 
   def delete()
