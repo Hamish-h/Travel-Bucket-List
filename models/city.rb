@@ -1,5 +1,5 @@
 require_relative( '../db/sql_runner' )
-require('pry-byebug')
+# require('pry-byebug')
 
 class City
 
@@ -30,7 +30,7 @@ class City
     end
 
     def update()
-      binding.pry
+      # binding.pry
       sql = "UPDATE cities
       SET
       (
