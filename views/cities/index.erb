@@ -1,6 +1,6 @@
 <H2>Cities</H2>
 <% @cities.each do |city| %>
-  <p><a href="/cities/<%= city.id %>/edit"><%= city.name() %></a></p>
+  <a href="/cities/<%= city.id %>/edit"><%= city.name() %></a>
   <hr />
 <% end %>
 

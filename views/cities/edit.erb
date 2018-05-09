@@ -1,13 +1,11 @@
 
 <form method="POST" action="/cities/<%= @city.id %>">
-  <div class="form-wrapper">
+  <label for="name">Name:</label>
+    <input type="text" name="name"
+  id="name" value="<%= @city.name %>"/>
+  <input type="submit" value="Update Name"/>
+</form>
 
-    <div class="form-cities">
-      <label for="name">Name:</label>
-      <input type="text" name="name"
-      id="name" value="<%= @city.name %>"/>
-    </div>
-
-  </div>
-  <input type="submit" value="Save"/>
+<form method="POST" action="/cities/<%= @city.id %>/delete">
+  <input type="submit" value="Delete "/>
 </form>
