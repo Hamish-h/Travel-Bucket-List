@@ -35,5 +35,4 @@ class Travel
     sql = "DELETE FROM travels"
     SqlRunner.run( sql )
   end
-
 end
