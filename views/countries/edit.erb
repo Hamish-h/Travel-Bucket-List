@@ -1,0 +1,12 @@
+<form method="POST" action="/countries/<%= @country.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-countries">
+      <label for="name">Name:</label>
+      <input type="text" name="name"
+      id="name" value="<%= @country.name %>"/>
+    </div>
+
+  </div>
+  <input type="submit" value="Save"/>
+</form>

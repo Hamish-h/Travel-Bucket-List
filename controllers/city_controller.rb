@@ -4,15 +4,18 @@ require( 'pry-byebug' )
 require_relative( '../models/city.rb' )
 require_relative( '../models/country.rb' )
 
+# get a list of cities
 get '/cities' do
   @cities = City.all()
   erb ( :"cities/index" )
 end
 
+# adsds new city
 get '/cities/new' do
   @cities = City.all
   erb(:"cities/new")
 end
+
 
 get '/cities/:id' do
   @city = City.find(params['id'].to_i)
@@ -31,7 +34,7 @@ post '/cities/:id' do
 end
 
 post '/cities' do
-  cities = City.new(params)
-  cities.save
+  city = City.new(params)
+  city.save
   redirect to("/cities")
 end
