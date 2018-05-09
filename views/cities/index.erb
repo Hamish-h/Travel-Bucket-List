@@ -1,5 +1,9 @@
 <H2>Cities</H2>
-<% @cities.each do |city| %>
+<form method="get" action="/cities/new">
+  <input type="submit" value="Add a New Destination"/>
+  <hr/>
+</form>
+<p><% @cities.each do |city| %></P>
   <a href="/cities/<%= city.id %>/edit"><%= city.name() %></a>
   <hr />
 <% end %>
