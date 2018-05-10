@@ -7,6 +7,7 @@
 .flex-container > div {
   justify-content: center;
   align-items: center;
+  text-align: center;
   background: url('images/phone.jpg');
   background-size: 100%;
   width: 300px;
@@ -16,6 +17,11 @@
   line-height: 25px;
   font-size: 20px;
 }
+
+.form-container {
+  margin-top: 50px;
+}
+
 
 .btn {
   border:1px none;

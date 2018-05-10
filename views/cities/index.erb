@@ -1,7 +1,9 @@
-<br/><H2>City List</H2>
+<div class="form-container">
+  <H2>City List</H2>
 <% @cities.each do |city| %>
 <br/><a href="/cities/<%= city.id %>/edit"><%= city.name() %></a>
 <% end %>
 <form method="get" action="/cities/new">
   <input type="submit" value="Add New"/>
 </form>
+</div>
