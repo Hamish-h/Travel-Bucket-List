@@ -5,7 +5,8 @@
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  justify-content: center;
+  align-items: center;
   background: url('images/phone.jpg');
   background-size: 100%;
   width: 300px;
