@@ -1,9 +1,9 @@
 <div class="form-container">
-  <H2>Country List</H2></p>
-<% for country in @countries %>
-<br/><a href="/countries/<%= country.id %>/edit"><%= country.name %></a>
-  <% end %>
-<form method="get" action="/countries/new">
-  <input type="submit" value="Add New"/>
-</form>
+  <H2>Country List</H2>
+    <% for country in @countries %>
+    <br/><a href="/countries/<%= country.id %>/edit"><%= country.name %></a>
+    <% end %>
+  <form method="get" action="/countries/new">
+    <input type="submit" value="Add New"/>
+  </form>
 </div>

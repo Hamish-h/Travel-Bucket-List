@@ -1,12 +1,12 @@
 <div class="form-container">
   <h2>Edit City</h2>
-<form method="POST" action="/cities/<%= @city.id %>">
-  <label for="name"></label>
-  <input type="text" name="name" id="name" value="<%= @city.name %>"/>
-  <p><textarea name="review" id="review" rows="8" cols="19"><%= @city.review %></textarea></p>
-  <p><input type="submit" value="Update"/></P>
-</form>
-<form method="POST" action="/cities/<%= @city.id %>/delete">
-  <input type="submit" value="Delete"/>
-</form>
+  <form method="POST" action="/cities/<%= @city.id %>">
+    <label for="name"></label>
+    <input type="text" name="name" id="name" value="<%= @city.name %>"/>
+    <p><textarea name="review" id="review" rows="6" cols="19"><%= @city.review %></textarea></p>
+    <input type="submit" value="Update"/>
+  </form>
+  <form method="POST" action="/cities/<%= @city.id %>/delete">
+    <input type="submit" value="Delete"/>
+  </form>
 </div>
