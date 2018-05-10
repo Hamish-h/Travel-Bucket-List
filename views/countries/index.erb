@@ -1,9 +1,7 @@
 <H2>Countries</H2>
 <form method="get" action="/countries/new">
   <input type="submit" value="Add a New Destination"/>
-  <hr/>
 </form>
 <p><% for country in @countries %></p>
   <a href="/countries/<%= country.id %>/edit"><%= country.name %></a>
-  <hr/>
   <% end %>
