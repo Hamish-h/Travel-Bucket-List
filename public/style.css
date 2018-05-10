@@ -17,9 +17,9 @@
 }
 
 .btn {
-  border:0px none;
+  border:1px none;
   border-radius: 3%;
   padding: 8px 12px;
   color: blue;
-  cursor:pointer;
+  cursor: pointer;
 }
