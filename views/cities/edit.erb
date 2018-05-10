@@ -2,7 +2,7 @@
 <form method="POST" action="/cities/<%= @city.id %>">
   <label for="name"></label>
     <input type="text" name="name" id="name" value="<%= @city.name %>"/>
-    <p><textarea name="review" id="review" rows="5" cols="19"><%= @city.review %></textarea></p>
+    <p><textarea name="review" id="review" rows="8" cols="19"><%= @city.review %></textarea></p>
   <p><input type="submit" value="Update"/></P>
 </form>
 <form method="POST" action="/cities/<%= @city.id %>/delete">
