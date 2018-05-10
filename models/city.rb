@@ -3,26 +3,27 @@ require_relative( '../db/sql_runner' )
 # binding.pry
 class City
 
-  attr_reader( :id, :country_id)
-  attr_accessor ( :name )
+  attr_reader( :id, :country_id )
+  attr_accessor( :name, :review )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
+    @review = options['review']
     @country_id = options['country_id']
   end
 
   def save()
     sql = "INSERT INTO cities
     (
-      name, country_id
+      name, review, country_id
     )
     VALUES
     (
-      $1, $2
+      $1, $2, $3
     )
     RETURNING id"
-    values = [@name, @country_id]
+    values = [@name, @review, @country_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -31,13 +32,13 @@ class City
     sql = "UPDATE cities
     SET
     (
-      name, country_id
+      name, review, country_id
     ) =
     (
-      $1, $2
+      $1, $2, $3
     )
-    WHERE id = $3"
-    values = [@name, @country_id, @id]
+    WHERE id = $4"
+    values = [@name, @review, @country_id, @id]
     results = SqlRunner.run(sql, values)
   end
 

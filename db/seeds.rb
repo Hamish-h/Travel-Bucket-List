@@ -24,18 +24,21 @@ country3.save()
 
 city1 = City.new({
   "name" => "Edinburgh",
+  "review" => "Mark destinations and add sights to see ...",
   "country_id" => country1.id()
 })
 city1.save()
 
 city2 = City.new({
   "name" => "Paris",
+  "review" => "Mark destinations and add sights to see ...",
   "country_id" => country2.id()
 })
 city2.save()
 
 city3 = City.new({
   "name" => "Lanzarote",
+  "review" => "Mark destinations and add sights to see ...",
   "country_id" => country3.id()
 })
 city3.save()
