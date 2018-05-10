@@ -2,7 +2,7 @@
 <form method="POST" action="/countries/<%= @country.id %>/edit">
   <label for="name"></label>
   <input type="text" name="name" id="name" value="<%= @country.name %>"/>
-  <p><input type="submit" value="Update"/></p>
+  <input type="submit" value="Update"/><br>
 </form>
 <form method="POST" action="/countries/<%= @country.id %>/delete">
   <input type="submit" value="Delete"/>

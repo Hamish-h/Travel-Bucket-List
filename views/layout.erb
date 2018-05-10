@@ -6,12 +6,20 @@
     <title>My Bucket List of Travels</title>
   </head>
   <body>
-  <main>
-    <section id="content">
-
-    <%= yield %>
-
-    </section>
-    </main>
+    <div class="flex-container">
+      <div>
+       <main>
+          <section id="content">
+          <%= yield %>
+          </section>
+        </main>
+        <form method="get" action="/cities">
+          <input type="submit" value="Cities"/>
+        </form>
+        <form method="get" action="/countries">
+          <input type="submit" value="Countries"/>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
