@@ -37,7 +37,7 @@ city2 = City.new({
 city2.save()
 
 city3 = City.new({
-  "name" => "Lanzarote",
+  "name" => "Madrid",
   "review" => "Mark destinations and add sights to see ...",
   "country_id" => country3.id()
 })
