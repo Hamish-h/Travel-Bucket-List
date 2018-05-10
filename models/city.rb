@@ -68,7 +68,7 @@ class City
   end
 
   def format_name
-  return "#{@name.capitalize}"
+    return "#{@name.capitalize}"
   end
 
   def self.delete_all

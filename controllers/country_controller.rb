@@ -31,8 +31,6 @@ post '/countries/:id/edit' do
   redirect to("/countries")
 end
 
-
-
 get '/countries/:id' do
   @country = Country.find(params['id'].to_i)
   erb( :"countries/show" )
