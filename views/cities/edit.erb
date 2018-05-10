@@ -1,8 +1,8 @@
 <form method="POST" action="/cities/<%= @city.id %>">
   <label for="name"></label>
     <input type="text" name="name" id="name" value="<%= @city.name %>"/>
-  <p><input type="submit" value="Update City Name"/></P>
+  <p><input type="submit" value="Update"/></P>
 </form>
 <form method="POST" action="/cities/<%= @city.id %>/delete">
-  <input type="submit" value="Delete Destination"/>
+  <input type="submit" value="Delete"/>
 </form>
